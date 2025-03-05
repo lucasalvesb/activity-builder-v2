@@ -53,5 +53,20 @@ namespace ActivityBuilderAPI.Controllers
 
             return Ok(question);
         }
+
+        [HttpGet]
+        public async Task<IActionResult> GetAllQuestions()
+        {
+            var questions = await _context.Questions
+                .Include(q => q.Answers)
+                .ToListAsync();
+
+            if (questions == null || !questions.Any())
+            {
+                return NotFound("No questions found.");
+            }
+
+            return Ok(questions);
+        }
     }
 }

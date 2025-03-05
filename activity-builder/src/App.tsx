@@ -1,5 +1,6 @@
 import './App.css'
 import QuestionForm from './QuestionForm'
+import QuestionList from './QuestionList'
 
 function App() {
 
@@ -7,6 +8,7 @@ function App() {
     <>
       <div>
       <QuestionForm />
+      <QuestionList />
       </div>
 
     </>
