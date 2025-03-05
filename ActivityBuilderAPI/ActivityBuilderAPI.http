@@ -1,0 +1,6 @@
+@ActivityBuilderAPI_HostAddress = http://localhost:5217
+
+GET {{ActivityBuilderAPI_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
