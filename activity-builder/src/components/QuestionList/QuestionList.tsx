@@ -1,52 +1,14 @@
 import React, { useState, useEffect } from 'react';
-import styled from 'styled-components';
-import { Question } from './question'; // Adjust the path based on your file structure
-
-// Styled components for the QuestionList
-const ListContainer = styled.div`
-  max-width: 800px;
-  margin: 20px auto;
-  padding: 20px;
-  background-color: #f9f9f9;
-  border-radius: 8px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-`;
-
-const QuestionTitle = styled.h2`
-  color: #333;
-  margin-bottom: 15px;
-`;
-
-const QuestionItem = styled.div`
-  background-color: #fff;
-  padding: 15px;
-  margin-bottom: 15px;
-  border-radius: 4px;
-  border: 1px solid #ddd;
-`;
-
-const AnswerList = styled.ul`
-  list-style: none;
-  padding: 0;
-`;
-
-const AnswerItem = styled.li<{ isCorrect: boolean }>`
-  padding: 8px;
-  margin: 5px 0;
-  background-color: ${props => (props.isCorrect ? '#d4edda' : '#f8f9fa')};
-  border-radius: 4px;
-  color: ${props => (props.isCorrect ? '#155724' : '#212529')};
-`;
-
-const Loading = styled.p`
-  text-align: center;
-  color: #666;
-`;
-
-const ErrorMessage = styled.p`
-  text-align: center;
-  color: #dc3545;
-`;
+import {
+  ListContainer,
+  QuestionTitle,
+  QuestionItem,
+  AnswerList,
+  AnswerItem,
+  Loading,
+  ErrorMessage,
+} from './QuestionList.styles';
+import { Question } from '../../types/question';
 
 const QuestionList: React.FC = () => {
   const [questions, setQuestions] = useState<Question[]>([]);

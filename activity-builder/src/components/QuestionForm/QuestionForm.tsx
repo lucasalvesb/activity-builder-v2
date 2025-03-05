@@ -19,12 +19,9 @@ import {
   keyframes, // Import the keyframes
 } from './QuestionForm.styles'; // Adjust the path based on your file structure
 import axios from 'axios';
+import { Answer } from '../../types/question';
 
-// Define the type for the Answer
-interface Answer {
-  text: string;
-  isCorrect: boolean;
-}
+
 
 const QuestionForm: React.FC = () => {
   const [question, setQuestion] = useState<string>('');

@@ -1,6 +1,6 @@
 import './App.css'
-import QuestionForm from './QuestionForm'
-import QuestionList from './QuestionList'
+import QuestionForm from './components/QuestionForm/QuestionForm'
+import QuestionList from './components/QuestionList/QuestionList'
 
 function App() {
 
