@@ -9,6 +9,8 @@ using Microsoft.EntityFrameworkCore;
 
 namespace ActivityBuilderAPI.Controllers
 {
+    [ApiController]
+    [Route("api/[controller]")]
     public class QuestionsController : ControllerBase
     {
         private readonly ApplicationDbContext _context;
