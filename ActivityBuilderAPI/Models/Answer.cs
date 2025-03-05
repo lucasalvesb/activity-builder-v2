@@ -1,12 +1,13 @@
 using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Threading.Tasks;
 
 namespace ActivityBuilderAPI.Models
 {
-    public class Question
+    public class Answer
     {
         [Key]
         public int Id { get; set; }
@@ -14,6 +15,9 @@ namespace ActivityBuilderAPI.Models
         [Required]
         public string Text { get; set; }
 
-        public List<Answer> Answers { get; set; } = new();
+        public bool IsCorrect { get; set; }
+
+        [ForeignKey("Question")]
+        public int QuestionId { get; set; }
     }
 }
