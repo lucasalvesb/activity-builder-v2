@@ -159,7 +159,6 @@ const QuestionForm: React.FC = () => {
         </SuccessScreen>
       )}
 
-      {/* Inject keyframes into the DOM for the animations */}
       <style>{keyframes.fadeIn}</style>
       <style>{keyframes.bounce}</style>
     </>
